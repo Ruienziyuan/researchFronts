@@ -9,10 +9,10 @@ library(tidytext)
 library(memoise)
 library(reshape2)
 
-load("Data_statistics.RData")
-load("simiIndex.RData")
-load("simiGrade.RData")
-load("Fronts.RData")
+load("./data/Data_statistics.RData")
+load("./data/simiIndex.RData")
+load("./data/simiGrade.RData")
+load("./data/Fronts.RData")
 
 issuelist <- list(
   "202007",
@@ -201,7 +201,7 @@ evolute_fronts <- memoise(function(topic = c("CH3NH3PbI3")) {
 })
 
 # 6
-# Function£ºwordcloud_fronts
+# Function??wordcloud_fronts
 wordcloud_fronts <- memoise(function(field = "Agricultural Sciences"){
   dataset = subset(rf.dataset, 
                    rf.dataset$Fields == field)
